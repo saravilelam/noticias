@@ -21,7 +21,7 @@ body{
     background-color: var(--almost-white);
 }
 
-body.menu-open::before{
+body.escurecer::before{
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ body.menu-open::before{
         
 }
 
-header nav.mobile{
+.header nav.abrir{
     position: fixed;
     background-color: var(--almost-white);
     right: 0%;
@@ -57,7 +57,7 @@ header nav.mobile{
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
-    display: none;
+    
 }
 
 .header-mobile nav button{
@@ -131,6 +131,14 @@ header nav.mobile{
     top: 0;
     height: 100vh;
     width: 16rem;
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+
+    transition: 0.7s;
 
 }
 
