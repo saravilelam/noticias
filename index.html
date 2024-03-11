@@ -11,20 +11,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <script src="./scripts.js"defer></script>
 </head>
-<body class="escurecer">
-    <header class="header-mobile">
-        <img src="./assets/images/logo.svg" alt="">
+<body>
+    <header>
+        <img src="./assets/images/logo.svg" alt="imagem logo">
 
         <button>
-            <img src="assets/images/icon-menu.svg" alt="">
+            <img src="assets/images/icon-menu.svg" alt=" icone do menu">
         </button>
 
-        <nav class="abrir">
+        
+
+        <nav class="mobile">
 
             <button>
                 <img src="./assets/images/icon-menu-close.svg" alt="ícone de fechar">
             </button>
 
+        
+
+            <a href="#">Home</a>
+            <a href="#">Novo</a>
+            <a href="#">Popular</a>
+            <a href="#">Trending</a>
+            <a href="#">Categorias</a>
+        </nav>
+
+        <nav class="descktop">
             <a href="#">Home</a>
             <a href="#">Novo</a>
             <a href="#">Popular</a>
@@ -35,8 +47,11 @@
     </header>
 
     <main>
-        <section class="primeira"
-            <img src="./assets/images/image-web-3-mobile.jpg" alt="icone puzzle colorido">
+        <section class="primeira">
+            <picture>
+                <source media="(min-width:700px )" srcset="./assets/images/image-web-3-descktop.jpg">
+                <img src="./assets/images/image-web-3-mobile.jpg" alt="icone puzzle colorido">
+            </picture>
             <h1>O futuro brilhante da Web 3.0?</h1>
             <p>Nós mergulhamos na próxima evolução da web que afirma devolver o poder das plataformas para as mãos das pessoas. Mas será que ela realmente está cumprindo sua promessa?</p>
             <button>Ler mais</button>

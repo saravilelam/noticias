@@ -28,15 +28,18 @@ body.escurecer::before{
 
 }
 
-.header-mobile{
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+
+    max-width: 1110px;
+    margin-inline: auto;
    
 }
 
-.header-mobile button{
+ header button{
     border: none;
     background: none;
     width: fit-content;
@@ -44,10 +47,11 @@ body.escurecer::before{
         
 }
 
-.header nav.abrir{
+
+header nav.mobile{
     position: fixed;
     background-color: var(--almost-white);
-    right: 0%;
+    right: 0;
     top: 0;
     height: 100vh;
     width: 16rem;
@@ -57,21 +61,52 @@ body.escurecer::before{
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
-    
-}
 
-.header-mobile nav button{
-    align-self: flex-end;
-    margin-bottom: 4.5rem;
+    transition: 0.7s;
 
 }
 
-.header-mobile nav a{
+
+
+
+header nav.abrir{
+    right: 0;
+}
+
+header nav button{
+    margin-left: auto;
+    margin-bottom: 4rem;
+
+}
+
+header .mobile a{
     text-decoration: none;
     color: var(--dark-blue);
     font-size: 1.125rem;
     line-height: 1.5rem;
 }
+
+
+.header.descktop{
+    display: none;
+}
+
+main{
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.margin-border-padding{
+    border-bottom: 1px solid var(--gumetal);
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.75rem;
+}
+
+main{
+    max-width: 1110px;
+    margin-inline: auto;
+}
+
 
 .primeira{
     margin-bottom: 4rem;
@@ -90,8 +125,8 @@ body.escurecer::before{
 
 }
 
-.primeira {
-    font-size: 0.935rem;
+.primeira p{
+    font-size: 0.9375rem;
     line-height: 1.625rem;
     color: var(--gumetal);
     margin-bottom: 1.5rem;
@@ -118,30 +153,6 @@ body.escurecer::before{
 
 }
 
-.margin-border-padding{
-    border-bottom: 1px solid var(--gumetal);
-    margin-bottom: 1.75rem;
-    padding-bottom: 1.75rem;
-}
-
-.header-mobile nav{
-    position: fixed;
-    background-color: var(--almost-white);
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 16rem;
-    z-index: 999;
-
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1.5rem;
-
-    transition: 0.7s;
-
-}
-
 .segunda h2{
     color: var(--yellow);
     font-size: 2rem;
@@ -160,7 +171,7 @@ body.escurecer::before{
 
 .segunda p{
     color: var(--almost-white);
-    font-size: 0.9375;
+    font-size: 0.9375rem;
     line-height: 1.625rem;
 }
 
@@ -196,4 +207,33 @@ body.escurecer::before{
     font-size: 0.9375;
     line-height: 1.625rem;
     color: var(--gumetal);
+}
+
+@media(min-width: 1110px){
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    .primeira{
+        grid-column: 1 / 3s;
+    }
+
+    header > button {
+        display: none;
+    }
+
+    header .descktop{
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .descktop a{
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gumetal);
+    }
 }
